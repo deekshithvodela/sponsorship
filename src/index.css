@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --font-display: "Barlow Condensed", sans-serif-condensed, "Arial Narrow", "Helvetica Neue Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: "Barlow", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    /* Theme Palette */
+    --color-abyssal: #0f0f0f;
+    --color-inset: #141414;
+    --color-surface: #161616;
+    --color-code: #1a1a1a;
+    --color-charcoal: #2a2a2a;
+    --color-edge: #55534f;
+
+    /* Stone & Paper Neutrals */
+    --color-chalk: #d4cdbc;
+    --color-dim: #aaa497;
+    --color-ephemeral: #a39e93;
+    --color-paper: #faf6ec;
+    --color-white: #ffffff;
+
+    /* Blood Red Accent Spectrum */
+    --color-rust: #bd2826;
+    --color-rust-text: #e5483c;
+    --color-rust-press: #ab2422;
+
+    /* Arterial Pulse Gradient */
+    --color-vein-core: #d9372b;
+    --color-vein-tail: #e5584a;
+    --color-vein-mid: #f39a8c;
+    --color-vein-head: #f0cbbe;
+    --color-vein-spark: #fff6f2;
+  }
+}
+
+/* Custom Base Rules */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--color-abyssal);
+  color: var(--color-chalk);
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-abyssal);
+  color: var(--color-chalk);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbars globally across all scrollable containers while preserving scrollability */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Font Utility Classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Tactical Background Blueprint Grid */
+.bg-blueprint-grid {
+  background-image: 
+    repeating-linear-gradient(to right, #2a2a2a 0, #2a2a2a 1px, transparent 1px, transparent 40px),
+    repeating-linear-gradient(to bottom, #2a2a2a 0, #2a2a2a 1px, transparent 1px, transparent 40px);
+}
+
+.bg-blueprint-dashed {
+  background-image: 
+    repeating-linear-gradient(to right, #2a2a2a 0 7px, transparent 7px 14px),
+    repeating-linear-gradient(to bottom, #2a2a2a 0 7px, transparent 7px 14px);
+}
+
+/* Tactical Corner Brackets Component */
+.corner-frame {
+  position: relative;
+}
+
+.corner-frame::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid var(--color-rust);
+  border-left: 2px solid var(--color-rust);
+  pointer-events: none;
+  z-index: 10;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.corner-frame::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid var(--color-rust);
+  border-right: 2px solid var(--color-rust);
+  pointer-events: none;
+  z-index: 10;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.corner-frame:hover::before,
+.corner-frame:hover::after {
+  border-color: var(--color-rust-text);
+  transform: scale(1.15);
+}
+
+/* Corner L-Brackets for Buttons */
+.btn-corner-brackets {
+  position: relative;
+}
+
+.btn-corner-brackets .corner-tl {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid var(--color-rust-text);
+  border-left: 2px solid var(--color-rust-text);
+  pointer-events: none;
+  transition: transform 0.15s ease-out;
+}
+
+.btn-corner-brackets .corner-br {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid var(--color-rust-text);
+  border-right: 2px solid var(--color-rust-text);
+  pointer-events: none;
+  transition: transform 0.15s ease-out;
+}
+
+.btn-corner-brackets:hover .corner-tl,
+.btn-corner-brackets:focus-visible .corner-tl {
+  transform: scale(1.6);
+}
+
+.btn-corner-brackets:hover .corner-br,
+.btn-corner-brackets:focus-visible .corner-br {
+  transform: scale(1.6);
+}
+
+/* Hazard Hatch Pattern (Drifting 45deg stripes) */
+.hazard-stripes {
+  background-image: repeating-linear-gradient(-45deg, #0f0f0f 0 3px, transparent 3px 6px);
+}
+
+.hazard-stripes-rust {
+  background-image: repeating-linear-gradient(-45deg, var(--color-rust) 0 3px, transparent 3px 6px);
+}
+
+/* Keyframe Animations */
+@keyframes ks-beat {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  18% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+  100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+}
+
+@keyframes ks-bp {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes ks-drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(8.4853px, 8.4853px);
+  }
+}
+
+@keyframes ks-pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.animate-beat {
+  animation: ks-beat 0.8333s ease-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: ks-pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Focus Ring Accessibility */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-chalk);
+  outline-offset: 2px;
+}
+
+.focus-ring-rust:focus-visible {
+  outline: 2px solid var(--color-rust-text);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-beat,
+  .animate-pulse-glow {
+    animation: none !important;
+  }
+}

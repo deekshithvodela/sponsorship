@@ -1,0 +1,23 @@
+{
+  "name": "KRITI 2027 Sponsorships",
+  "short_name": "KRITI 2027",
+  "description": "Official Sponsorship & Partnerships Prospectus · Kakatiya Medical College",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0F0F0F",
+  "theme_color": "#0F0F0F",
+  "icons": [
+    {
+      "src": "./pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
