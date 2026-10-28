@@ -29,7 +29,7 @@ export const FinalCTA: React.FC = () => {
 
         {/* Copy */}
         <p className="font-body text-[16px] sm:text-[18px] md:text-[20px] text-[#aaa497] max-w-[700px] mx-auto leading-relaxed mb-8">
-          Sponsorship slots for the Title Partner (sole exclusivity) and Co-Host Partner tiers are strictly limited. Connect directly with our organisers to reserve your stage presence and activate statewide outreach.
+          Sponsorship slots for the Platinum Tier (Event Title Partner) and Gold Tier (Co-Host) are strictly limited. Connect directly with our organisers to reserve your stage presence and activate statewide outreach.
         </p>
 
         {/* Action Buttons (Strictly Zero Forms) */}

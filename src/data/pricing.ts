@@ -1,9 +1,9 @@
 /**
- * KRITI 2027 Sponsorship Packages & 10 Confirmed Academic Event Tracks
+ * KRITI 2027 Sponsorship Packages & 11 Confirmed Academic Event Tracks
  * 
  * Kakatiya Medical College, Warangal
  * Incorporates confirmed events: PG Poster, UG Poster, PG Paper, UG Paper,
- * Symposium, Debate, Hackathon, Med-Tech Exhibition, MUN, Jeopardy.
+ * Symposium, Debate, Hackathon, Med-Tech Exhibition, MUN, Jeopardy, Workshops.
  * NOTE: Prize pool amounts are unfinalized and strictly omitted.
  */
 
@@ -43,82 +43,80 @@ export interface ConferenceMetric {
 
 export const sponsorshipTiers: SponsorshipTier[] = [
   {
-    id: 'title-partner',
-    code: 'TIER-01 // TITLE',
-    name: 'Title Partner (Full Monopoly)',
-    tagline: 'Sole Conference Title Partnership & Complete Event Exclusivity',
+    id: 'platinum',
+    code: 'TIER-01 // PLATINUM',
+    name: 'Platinum Tier',
+    tagline: 'Event Title Partner & Presenter · Prime Exhibition Footprint',
     price: 0,
     formattedPrice: 'Pricing on Request',
-    priceSubtext: 'Exclusive Title Partnership · Complete Institutional Branding',
-    badge: 'FLAGSHIP // SOLE EXCLUSIVITY',
+    priceSubtext: 'A Single Event Title Partner & Presenter · Complete Event Branding',
+    badge: 'FLAGSHIP // EVENT TITLE',
     isFlagship: true,
     overview:
-      'The premier sponsorship tier offering absolute institutional dominance, headline conference title presenting rights across all flagship plenaries, 180 minutes of stage presence, and statewide campus outreach across 50+ colleges.',
+      'The premier sponsorship tier offering event title presenting rights for an academic track of your choice out of 11 events, 20-30 minutes of dedicated mainstage presence (including promotional video broadcast), and statewide campus outreach across 50+ colleges.',
     keyFeatures: [
-      'Headline Conference Title Presenter & Host across all Flagship Sessions',
-      '180 minutes of guaranteed mainstage presence across the 2-day conference',
+      'Official Event Title Partner & Presenter for your chosen academic track',
+      '20-30 minutes of guaranteed mainstage presence across the 3-day conference (including promotional video broadcast on main LED screens)',
       'Dedicated partner keynote address during prime plenary session',
-      '10-minute promotional video broadcast during interval breaks on main LED screens',
       'Integration with statewide offline PR campaign visiting 50+ medical colleges across Telangana',
-      'Two-day prime designated exhibition booth in central high-traffic atrium',
+      'Prime designated exhibition booth in central high-traffic atrium',
       'Complete offline PR campaign targeting medical colleges across Telangana & AP',
       'Multi-channel online broadcast across official KRITI social media and website',
       'Partner mention in the official KRITI Souvenir (Kakatiya Chronicles) distributed to faculty & delegates',
       'Prominent venue banners, standees across key atriums, and direct coverage across delegate network',
     ],
-    limitations: 'Strictly limited to 1 exclusive organization across the conference.',
+    limitations: 'Limited availability per academic event track.',
     actionText: 'Enquire via WhatsApp',
     actionType: 'title-partner',
   },
   {
-    id: 'co-host-partner',
-    code: 'TIER-02 // CO-HOST',
-    name: 'Co-Host Partner (Collaborative Monopoly)',
-    tagline: 'Strategic Conference Co-Host Association & Prime Exhibition Footprint',
+    id: 'gold',
+    code: 'TIER-02 // GOLD',
+    name: 'Gold Tier',
+    tagline: 'Strategic Co-Host Association & Dedicated Stage Exposure',
     price: 0,
     formattedPrice: 'Pricing on Request',
     priceSubtext: 'Substantial stage presence & city-wide PR integration',
-    badge: 'HIGH IMPACT // CO-HOST',
+    badge: 'HIGH IMPACT // GOLD',
     isFlagship: false,
     overview:
-      'Strategic partnership positioning your brand as the official Co-Host Partner of the Annual Conference with 90 minutes of dedicated stage presence, keynote speech, and offline PR reach across Hyderabad medical colleges.',
+      'Strategic partnership positioning your brand as an official Co-Host Partner of the Annual Conference with 10-15 minutes of dedicated stage presence (including promotional video broadcast), keynote speech, and offline PR reach across medical colleges.',
     keyFeatures: [
       'Official Co-Host Partner across Annual Conference Sessions & Plenaries',
-      '90 minutes of dedicated mainstage presence across conference sessions',
+      '10-15 minutes of dedicated mainstage presence across conference sessions (including promotional video broadcast on LED displays)',
       'Dedicated partner keynote address on the mainstage',
-      '5-minute promotional video broadcast during interval sessions on LED displays',
       'Integration with offline PR campaign targeting medical colleges in Hyderabad',
-      'Two-day designated exhibition booth in high-traffic atrium',
+      'Designated exhibition booth in high-traffic atrium',
       'Offline PR campaign targeting medical colleges in the Hyderabad metro region',
       'Online broadcast across KRITI social media channels and official website',
       'Partner mention in the official KRITI Souvenir (Kakatiya Chronicles)',
       'Banners, standees, and direct coverage across delegate network',
     ],
-    limitations: 'Limited to 2 non-competing collaborative partners.',
+    limitations: 'Limited to non-competing collaborative partners.',
     actionText: 'Enquire via WhatsApp',
     actionType: 'co-host-partner',
   },
   {
-    id: 'exhibition-partner',
-    code: 'TIER-03 // EXHIBITION',
-    name: 'Exhibition Partner (Limited Monopoly)',
+    id: 'silver',
+    code: 'TIER-03 // SILVER',
+    name: 'Silver Tier',
     tagline: 'High-Footfall Atrium Exhibition & Multi-Channel Broadcast',
     price: 0,
     formattedPrice: 'Pricing on Request',
-    priceSubtext: 'Two-day primary exhibition footprint',
+    priceSubtext: 'Primary conference exhibition footprint',
     badge: 'DIRECT ENGAGEMENT',
     isFlagship: false,
     overview:
-      'Essential on-ground exhibition presence designed for healthcare organizations, diagnostic services, medical device companies, and educational publishers seeking direct interaction with 2,000+ delegates.',
+      'Essential on-ground exhibition presence designed for healthcare organizations, diagnostic services, medical device companies, and educational publishers seeking direct interaction with 2,000+ delegates across all 3 conference days.',
     keyFeatures: [
-      'Two-day designated workspace / booth exhibit in high-traffic atrium',
+      'Designated workspace / booth exhibit in high-traffic atrium across all 3 conference days',
       'Placement of official brand banners and standees in key venue atriums and entrance halls',
       'Digital brand broadcast across KRITI official social media channels',
       'Official partner listing and logo placement on the KRITI website',
       'Acknowledgment mention in the official KRITI Souvenir (Kakatiya Chronicles)',
       'Direct engagement and lead generation with 2,000+ medical delegates',
     ],
-    limitations: 'Exhibition & branding only; excludes plenary stage time and headline title hosting.',
+    limitations: 'Exhibition & branding only; excludes plenary stage time.',
     actionText: 'Enquire via WhatsApp',
     actionType: 'exhibition-partner',
   },
@@ -272,7 +270,22 @@ export const academicTracks: AcademicTrack[] = [
       'UG Poster gallery aisle and display panel branding',
       'Logo printed on all participant display boards and tags',
       'Presentation of the Best UG Scientific Poster Award',
-      'High footfall visibility throughout the two conference days',
+      'High footfall visibility throughout the conference days',
+    ],
+  },
+  {
+    id: 'track-workshops',
+    name: 'Hands-on Medical Workshops',
+    code: 'EVT-11 // WORKSHOPS',
+    targetAudience: 'Universal Medico',
+    category: 'Clinical Skill & Simulation',
+    description:
+      'Immersive, practical clinical masterclasses and certified simulation training workshops covering basic surgical skills, BLS/ACLS protocols, point-of-care ultrasound, and emergency medical procedures.',
+    deliverables: [
+      'Official Title Endorsement of Clinical Workshop Modules ("Powered by [Partner]")',
+      'Opportunity to integrate diagnostic equipment, devices, or clinical consumables in hands-on training',
+      'Branded training completion certificates distributed to attending medical delegates',
+      'Dedicated branding across workshop halls, simulation consoles, and training manuals',
     ],
   },
 ];
@@ -292,8 +305,8 @@ export const conferenceMetrics: ConferenceMetric[] = [
   },
   {
     label: 'Academic Event Tracks',
-    value: '10+ Events',
-    subtext: 'Hackathon, Symposium, Med-Tech Expo, MUN, Jeopardy & Papers',
+    value: '11 Events',
+    subtext: 'Hackathon, Symposium, Med-Tech Expo, Workshops, MUN, Quiz & Papers',
     iconName: 'Trophy',
   },
   {

@@ -18,7 +18,7 @@ export const PricingTiers: React.FC = () => {
             Academic Packages & Event Tracks<span className="text-[#e5483c]">.</span>
           </h2>
           <p className="font-body text-[15px] sm:text-[18px] text-[#aaa497] mt-3">
-            Select an institutional tier for exclusive conference monopoly and statewide PR integration, or endorse individual academic competition tracks across our 10 confirmed conference events.
+            Select an institutional tier for premier brand integration and statewide PR reach, or endorse individual academic competition tracks across our 11 confirmed conference events.
           </p>
 
           {/* View Tab Switcher */}
@@ -55,9 +55,9 @@ export const PricingTiers: React.FC = () => {
                   : 'text-[#a39e93] hover:text-[#d4cdbc]'
               }`}
             >
-              <span>10 Academic Event Tracks</span>
+              <span>11 Academic Event Tracks</span>
               <span className="text-[9px] sm:text-[10px] px-1.5 py-0.2 bg-[#0f0f0f] text-[#25D366] border border-[#2a2a2a] font-bold">
-                10 CONFIRMED
+                11 CONFIRMED
               </span>
             </button>
           </div>
@@ -177,7 +177,7 @@ export const PricingTiers: React.FC = () => {
           </div>
         )}
 
-        {/* Tab Content 2: 10 Confirmed Academic Event Tracks */}
+        {/* Tab Content 2: 11 Confirmed Academic Event Tracks */}
         {activeTab === 'tracks' && (
           <div id="panel-tracks" role="tabpanel" aria-labelledby="tab-tracks">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 mb-12">

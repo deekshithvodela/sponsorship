@@ -188,7 +188,7 @@ async function runTests() {
   console.log('Event EVT-04 renamed to "Med- Debate":', hasMedDebate ? 'PASS' : 'FAIL');
   if (!hasMedDebate) allPassed = false;
 
-  // 15. Verify 10 confirmed academic events
+  // 15. Verify 11 confirmed academic events
   const confirmedEvents = [
     'Medical Hackathon',
     'Medical Symposium',
@@ -199,7 +199,8 @@ async function runTests() {
     'PG Paper Presentation',
     'UG Paper Presentation',
     'PG Poster Presentation',
-    'UG Poster Presentation'
+    'UG Poster Presentation',
+    'Hands-on Medical Workshops'
   ];
 
   let eventsFound = 0;
@@ -207,8 +208,8 @@ async function runTests() {
     const count = await testPage.locator(`h3:has-text("${evt.split(' ')[0]}")`).count();
     if (count > 0) eventsFound++;
   }
-  console.log(`10 Confirmed Events in Track View: ${eventsFound}/10 verified (${eventsFound >= 8 ? 'PASS' : 'FAIL'})`);
-  if (eventsFound < 8) allPassed = false;
+  console.log(`11 Confirmed Events in Track View: ${eventsFound}/11 verified (${eventsFound >= 9 ? 'PASS' : 'FAIL'})`);
+  if (eventsFound < 9) allPassed = false;
 
   // Switch back to Academic Packages tab
   const packagesTabBtn = testPage.locator('#tab-packages');
@@ -228,14 +229,14 @@ async function runTests() {
   if (prizeMentionFound) allPassed = false;
 
   // 17. Verify Simulator Interaction
-  const cohostBtn = testPage.locator('button:has-text("Co-Host Partner")').first();
-  await cohostBtn.click();
+  const goldBtn = testPage.locator('button:has-text("Gold Tier")').first();
+  await goldBtn.click();
   await testPage.waitForTimeout(150);
   const estimatorCta = testPage.locator('#estimator-whatsapp-cta');
   const estimatorHref = await estimatorCta.getAttribute('href');
-  const simulatorHasCohost = estimatorHref && estimatorHref.includes('Co-Host') && estimatorHref.includes('Organisers');
-  console.log('Simulator interaction (Co-Host Tier & Organisers in WhatsApp URL):', simulatorHasCohost ? 'PASS' : `FAIL (${estimatorHref})`);
-  if (!simulatorHasCohost) allPassed = false;
+  const simulatorHasGold = estimatorHref && estimatorHref.includes('Gold') && estimatorHref.includes('Organisers');
+  console.log('Simulator interaction (Gold Tier & Organisers in WhatsApp URL):', simulatorHasGold ? 'PASS' : `FAIL (${estimatorHref})`);
+  if (!simulatorHasGold) allPassed = false;
 
   await browser.close();
 

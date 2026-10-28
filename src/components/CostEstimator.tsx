@@ -37,14 +37,14 @@ const AVAILABLE_TRACKS: EventTrackOption[] = [
   { id: 'jeopardy', name: 'Medical Jeopardy', code: 'EVT-06', category: 'Quiz' },
   { id: 'papers', name: 'Scientific Papers (PG/UG)', code: 'EVT-07/08', category: 'Research' },
   { id: 'posters', name: 'Scientific Posters (PG/UG)', code: 'EVT-09/10', category: 'Clinical' },
+  { id: 'workshops', name: 'Hands-on Workshops', code: 'EVT-11', category: 'Skills' },
 ];
 
 const AVAILABLE_DELIVERABLES: DeliverableOption[] = [
-  { id: 'keynote', label: 'Prime Plenary Keynote Address', impactScore: 18, stageMinutes: 10, category: 'Mainstage' },
-  { id: 'booth', label: 'Two-Day Prime Exhibition Demo Booth', impactScore: 16, category: 'Exhibition' },
+  { id: 'keynote', label: 'Dedicated Mainstage Presence & LED Video Broadcast', impactScore: 20, category: 'Mainstage' },
+  { id: 'booth', label: 'Three-Day Prime Exhibition Demo Booth', impactScore: 16, category: 'Exhibition' },
   { id: 'campus-tour', label: 'Campus PR Tour Feature (50+ Medical Colleges)', impactScore: 18, category: 'Statewide' },
   { id: 'souvenir', label: 'Partner Mention in Official KRITI Souvenir (Kakatiya Chronicles)', impactScore: 14, category: 'Publication' },
-  { id: 'video-promo', label: 'LED Interval Video Broadcasts (10 Mins / Break)', impactScore: 12, stageMinutes: 10, category: 'Mainstage' },
   { id: 'delegate-kit', label: 'Delegate Welcome Kit Inserts (2,000+ Medicos)', impactScore: 10, category: 'Collateral' },
 ];
 
@@ -56,7 +56,6 @@ export const CostEstimator: React.FC = () => {
     'booth',
     'campus-tour',
     'souvenir',
-    'video-promo',
   ]);
 
   // Handle tier change with sensible default deliverables
@@ -68,12 +67,11 @@ export const CostEstimator: React.FC = () => {
         'booth',
         'campus-tour',
         'souvenir',
-        'video-promo',
         'delegate-kit',
       ]);
       setSelectedTracks(['hackathon']);
     } else if (tier === 'cohost') {
-      setSelectedDeliverables(['keynote', 'booth', 'campus-tour', 'souvenir', 'video-promo']);
+      setSelectedDeliverables(['keynote', 'booth', 'campus-tour', 'souvenir']);
       setSelectedTracks(['hackathon']);
     } else {
       setSelectedDeliverables(['booth', 'souvenir']);
@@ -96,14 +94,17 @@ export const CostEstimator: React.FC = () => {
   // Dynamic calculations
   const tierName =
     selectedTier === 'title'
-      ? 'Title Partner (Full Monopoly)'
+      ? 'Platinum Tier (Single Event Title Partner)'
       : selectedTier === 'cohost'
-      ? 'Co-Host Partner (Collaborative Monopoly)'
-      : 'Exhibition Partner (Limited Monopoly)';
+      ? 'Gold Tier (Co-Host Partner)'
+      : 'Silver Tier (Exhibition Partner)';
 
-  const baseMinutes = selectedTier === 'title' ? 180 : selectedTier === 'cohost' ? 90 : 0;
-  const extraKeynote = selectedDeliverables.includes('keynote') ? 10 : 0;
-  const totalStageMinutes = baseMinutes + (selectedTier === 'exhibition' ? extraKeynote : 0);
+  const stagePresence =
+    selectedTier === 'title'
+      ? '20-30 Minutes'
+      : selectedTier === 'cohost'
+      ? '10-15 Minutes'
+      : 'Atrium Demo Only';
 
   // Dynamic Visibility & Engagement Score (Max 100)
   const visibilityScore = useMemo(() => {
@@ -159,7 +160,7 @@ export const CostEstimator: React.FC = () => {
             Configure Your Partnership Package<span className="text-[#e5483c]">.</span>
           </h2>
           <p className="font-body text-[15px] sm:text-[17px] text-[#aaa497] max-w-[760px] mt-3">
-            Select your base conference tier, customize academic track endorsements across our 10 confirmed events, and toggle activation deliverables to simulate your organization’s multi-channel reach.
+            Select your base conference tier, customize academic track endorsements across our 11 confirmed events, and toggle activation deliverables to simulate your organization’s multi-channel reach.
           </p>
         </div>
 
@@ -177,9 +178,9 @@ export const CostEstimator: React.FC = () => {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {[
-                  { id: 'title', label: 'Title Partner', code: 'TIER-01 // TITLE', badge: 'Sole Exclusivity' },
-                  { id: 'cohost', label: 'Co-Host Partner', code: 'TIER-02 // CO-HOST', badge: 'High Impact' },
-                  { id: 'exhibition', label: 'Exhibition Partner', code: 'TIER-03 // EXHIBITION', badge: 'Atrium Booth' },
+                  { id: 'title', label: 'Platinum Tier', code: 'TIER-01 // PLATINUM', badge: 'Event Title Partner' },
+                  { id: 'cohost', label: 'Gold Tier', code: 'TIER-02 // GOLD', badge: 'Co-Host Partner' },
+                  { id: 'exhibition', label: 'Silver Tier', code: 'TIER-03 // SILVER', badge: '3-Day Atrium Booth' },
                 ].map((item) => {
                   const isSelected = selectedTier === item.id;
                   return (
@@ -364,7 +365,7 @@ export const CostEstimator: React.FC = () => {
                   <span>Plenary Mainstage Exposure</span>
                 </div>
                 <div className="font-mono text-[14px] text-[#faf6ec] font-bold">
-                  {totalStageMinutes > 0 ? `${totalStageMinutes} Minutes` : 'Atrium Demo Only'}
+                  {stagePresence}
                 </div>
               </div>
 

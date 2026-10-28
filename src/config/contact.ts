@@ -42,13 +42,13 @@ export const contactConfig: ContactConfig = {
 
   tierMessages: {
     titlePartner:
-      'Hello KRITI 2027 Organisers, we would like to explore the Title Partner (Full Monopoly) package for KRITI 2027. Please share the prospectus, partnership terms, and onboarding details.',
+      'Hello KRITI 2027 Organisers, we would like to explore the Platinum Tier (Single Event Title Partner & Presenter) package for KRITI 2027. Please share the prospectus, partnership terms, and onboarding details.',
     coHostPartner:
-      'Hello KRITI 2027 Organisers, we are interested in the Co-Host Partner (Collaborative Monopoly) package for KRITI 2027. Please provide partnership deliverables and scheduling information.',
+      'Hello KRITI 2027 Organisers, we are interested in the Gold Tier (Co-Host Partner) package for KRITI 2027. Please provide partnership deliverables and scheduling information.',
     exhibitionPartner:
-      'Hello KRITI 2027 Organisers, we would like to book a designated Exhibition Partner booth at KRITI 2027. Please share booth specifications and layout.',
+      'Hello KRITI 2027 Organisers, we would like to book a designated Silver Tier (Exhibition Partner) booth at KRITI 2027. Please share booth specifications and layout.',
     academicTrack:
-      'Hello KRITI 2027 Organisers, we are interested in endorsing an Academic Event Track (such as Hackathon, Symposium, Med-Tech Expo, MUN, Quiz, Med- Debate, Paper, or Poster) at KRITI 2027.',
+      'Hello KRITI 2027 Organisers, we are interested in endorsing an Academic Event Track (such as Workshops, Hackathon, Symposium, Med-Tech Expo, MUN, Quiz, Med- Debate, Paper, or Poster) at KRITI 2027.',
     customReach:
       'Hello KRITI 2027 Organisers, I used your Academic Partnership Simulator and would like to discuss a customized multi-channel activation package for our organization.',
   },

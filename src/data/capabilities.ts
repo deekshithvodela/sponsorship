@@ -62,7 +62,7 @@ export const conferencePillars: PillarItem[] = [
     category: 'Medical Technology',
     description:
       'A dedicated exhibition arena where healthcare innovators, surgical manufacturers, diagnostic labs, and medical software providers exhibit directly to over 2,000 clinicians, residents, and medicos.',
-    impactMetric: 'Two-Day Prime Exhibition Footprint',
+    impactMetric: 'Three-Day Prime Exhibition Footprint',
     badge: 'Industry Showcase',
   },
   {
@@ -99,21 +99,21 @@ export const comparisonMatrix: ComparisonMatrixRow[] = [
   },
   {
     category: 'Investment & Association',
-    deliverable: 'Conference & Flagship Event Hosting Role',
-    fullMonopoly: 'Exclusive Title Host of the Annual Conference',
-    collabMonopoly: 'Official Co-Host of the Annual Conference',
-    limitedMonopoly: false,
-    notes: 'Exclusive headline presenting rights across all flagship plenaries',
+    deliverable: 'Event Title Partner & Hosting Role',
+    fullMonopoly: 'Single Event Title Partner & Presenter (Choice of 11 Events)',
+    collabMonopoly: 'Official Co-Host Partner of Annual Conference',
+    limitedMonopoly: 'Official Conference Exhibitor',
+    notes: 'Official title presentation rights for your chosen event track or co-host association',
   },
 
   // 2. Mainstage & Keynote
   {
     category: 'Stage Presence & Keynote',
-    deliverable: 'Guaranteed Stage Presence',
-    fullMonopoly: '180 Minutes',
-    collabMonopoly: '90 Minutes',
+    deliverable: 'Guaranteed Mainstage Presence (incl. Video Broadcast)',
+    fullMonopoly: '20-30 Minutes',
+    collabMonopoly: '10-15 Minutes',
     limitedMonopoly: false,
-    notes: 'Dedicated plenary stage exposure across the 2-day conference',
+    notes: 'Dedicated plenary stage exposure and LED interval video broadcasts across the 3-day conference',
   },
   {
     category: 'Stage Presence & Keynote',
@@ -123,23 +123,15 @@ export const comparisonMatrix: ComparisonMatrixRow[] = [
     limitedMonopoly: false,
     notes: 'Opportunity for guest speaker to present corporate vision to 2,000+ delegates',
   },
-  {
-    category: 'Stage Presence & Keynote',
-    deliverable: 'Interval Video Promo Broadcasts',
-    fullMonopoly: '10-Minute Interval Promos',
-    collabMonopoly: '5-Minute Interval Promos',
-    limitedMonopoly: false,
-    notes: 'Broadcasted on high-resolution mainstage LED displays during session breaks',
-  },
 
   // 3. Exhibition & Workspaces
   {
     category: 'Exhibition & Workspaces',
-    deliverable: 'Two-Day Designated Booth Exhibit',
+    deliverable: 'Three-Day Designated Booth Exhibit',
     fullMonopoly: 'Prime Central Atrium Workspace',
     collabMonopoly: 'Prime Central Atrium Workspace',
     limitedMonopoly: 'Designated Atrium Exhibit Booth',
-    notes: 'Full two-day exhibition presence for delegate consultations and product demos',
+    notes: 'Full three-day exhibition presence across conference days for delegate consultations and product demos',
   },
   {
     category: 'Exhibition & Workspaces',

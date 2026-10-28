@@ -59,7 +59,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="#events" className="text-[#a39e93] hover:text-[#d4cdbc] no-underline transition-colors">
-                  10 Confirmed Events
+                  11 Confirmed Events
                 </a>
               </li>
               <li>

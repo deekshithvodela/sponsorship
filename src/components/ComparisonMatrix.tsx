@@ -50,16 +50,16 @@ export const ComparisonMatrix: React.FC = () => {
                   Deliverables & Partnership Scope
                 </th>
                 <th scope="col" className="py-4 px-4 text-center font-display text-[15px] sm:text-[16px] font-bold text-[#faf6ec] uppercase bg-[#181111] border-x border-[#2a2a2a]">
-                  <div className="text-[10px] text-[#e5483c] font-mono tracking-wider">TIER-01 // TITLE</div>
-                  <div>Full Monopoly</div>
+                  <div className="text-[10px] text-[#e5483c] font-mono tracking-wider">TIER-01 // PLATINUM</div>
+                  <div>Platinum Tier</div>
                 </th>
                 <th scope="col" className="py-4 px-4 text-center font-display text-[15px] sm:text-[16px] font-bold text-[#faf6ec] uppercase">
-                  <div className="text-[10px] text-[#a39e93] font-mono tracking-wider">TIER-02 // CO-HOST</div>
-                  <div>Collaborative Monopoly</div>
+                  <div className="text-[10px] text-[#a39e93] font-mono tracking-wider">TIER-02 // GOLD</div>
+                  <div>Gold Tier</div>
                 </th>
                 <th scope="col" className="py-4 px-4 text-center font-display text-[15px] sm:text-[16px] font-bold text-[#faf6ec] uppercase">
-                  <div className="text-[10px] text-[#a39e93] font-mono tracking-wider">TIER-03 // EXHIBITION</div>
-                  <div>Limited Monopoly</div>
+                  <div className="text-[10px] text-[#a39e93] font-mono tracking-wider">TIER-03 // SILVER</div>
+                  <div>Silver Tier</div>
                 </th>
               </tr>
             </thead>
