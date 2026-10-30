@@ -57,6 +57,7 @@ export const CostEstimator: React.FC = () => {
     'booth',
     'campus-tour',
     'souvenir',
+    'delegate-kit',
   ]);
 
   // Handle tier change with sensible default deliverables

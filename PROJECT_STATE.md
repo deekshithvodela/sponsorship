@@ -53,6 +53,7 @@
 5. Phase 10: Tier names renamed to Platinum, Gold, Silver; stage presence adjusted to 20-30 min (Platinum) and 10-15 min (Gold) with LED interval video promo integrated; conference duration updated to 3 days; Title Partnership scope clarified as single event title presenting rights (out of 11 events); Hands-on Medical Workshops added as 11th confirmed event across all components, simulator, matrix, and test suite.
 6. Phase 11: Delegate attendance updated from 2,000+ to 3,000+ across all sections and metadata; Gold tier keynote address removed from deliverables, overview, and matrix; Conference pillars updated with Flagship Medical Jeopardy at Pillar [01] and Medical Hackathon at Pillar [03] (with zero engineers mentioned); Organiser email deekshithvodela@gmail.com added to footer below 24x7; 100% test pass rate across 6 viewports.
 7. Phase 12: Offline PR deduplication across Platinum and Gold tiers; Gold Tier explicitly scopes co-hosting an academic track of choice; Code Blue (Emergency Medicine Quiz) added as 12th confirmed event; Package maker simulator WhatsApp message polished into a clean bulleted list with bold headings and zero bracket syntax; 25/25 automated tests passing.
+8. Phase 13: Fixed simulator initial state in `CostEstimator.tsx` to include `delegate-kit` on page load/refresh, ensuring 100% parity with clicking Platinum Tier; 26/26 automated tests passing.
 
 ## Important Files
 - [`index.html`](index.html) — meta, fonts, OG, JSON-LD

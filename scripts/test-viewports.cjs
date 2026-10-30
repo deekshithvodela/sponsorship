@@ -229,7 +229,13 @@ async function runTests() {
   console.log('Zero Prize Pool Figures Constraint:', !prizeMentionFound ? 'PASS (0 prize figures)' : 'FAIL');
   if (prizeMentionFound) allPassed = false;
 
-  // 17. Verify Simulator Interaction
+  // 17. Verify Simulator Default State (Platinum Tier & Delegate Kit selected on initial load)
+  const delegateKitBtn = testPage.locator('button:has-text("Delegate Welcome Kit Inserts")');
+  const isDelegateKitChecked = (await delegateKitBtn.getAttribute('aria-pressed')) === 'true';
+  console.log('Simulator Default Inclusions: Delegate Kit checked on load:', isDelegateKitChecked ? 'PASS' : 'FAIL');
+  if (!isDelegateKitChecked) allPassed = false;
+
+  // 17b. Verify Simulator Interaction
   const goldBtn = testPage.locator('button:has-text("Gold Tier")').first();
   await goldBtn.click();
   await testPage.waitForTimeout(150);
