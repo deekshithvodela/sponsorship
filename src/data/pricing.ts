@@ -80,11 +80,10 @@ export const sponsorshipTiers: SponsorshipTier[] = [
     badge: 'HIGH IMPACT // GOLD',
     isFlagship: false,
     overview:
-      'Strategic partnership positioning your brand as an official Co-Host Partner of the Annual Conference with 10-15 minutes of dedicated stage presence (including promotional video broadcast), keynote speech, and offline PR reach across medical colleges.',
+      'Strategic partnership positioning your brand as an official Co-Host Partner of the Annual Conference with 10-15 minutes of dedicated stage presence (including promotional video broadcast) and offline PR reach across medical colleges.',
     keyFeatures: [
       'Official Co-Host Partner across Annual Conference Sessions & Plenaries',
       '10-15 minutes of dedicated mainstage presence across conference sessions (including promotional video broadcast on LED displays)',
-      'Dedicated partner keynote address on the mainstage',
       'Integration with offline PR campaign targeting medical colleges in Hyderabad',
       'Designated exhibition booth in high-traffic atrium',
       'Offline PR campaign targeting medical colleges in the Hyderabad metro region',
@@ -107,14 +106,14 @@ export const sponsorshipTiers: SponsorshipTier[] = [
     badge: 'DIRECT ENGAGEMENT',
     isFlagship: false,
     overview:
-      'Essential on-ground exhibition presence designed for healthcare organizations, diagnostic services, medical device companies, and educational publishers seeking direct interaction with 2,000+ delegates across all 3 conference days.',
+      'Essential on-ground exhibition presence designed for healthcare organizations, diagnostic services, medical device companies, and educational publishers seeking direct interaction with 3,000+ delegates across all 3 conference days.',
     keyFeatures: [
       'Designated workspace / booth exhibit in high-traffic atrium across all 3 conference days',
       'Placement of official brand banners and standees in key venue atriums and entrance halls',
       'Digital brand broadcast across KRITI official social media channels',
       'Official partner listing and logo placement on the KRITI website',
       'Acknowledgment mention in the official KRITI Souvenir (Kakatiya Chronicles)',
-      'Direct engagement and lead generation with 2,000+ medical delegates',
+      'Direct engagement and lead generation with 3,000+ medical delegates',
     ],
     limitations: 'Exhibition & branding only; excludes plenary stage time.',
     actionText: 'Enquire via WhatsApp',
@@ -130,12 +129,12 @@ export const academicTracks: AcademicTrack[] = [
     targetAudience: 'Universal Medico',
     category: 'Innovation & MedTech',
     description:
-      'KRITI’s flagship clinical problem-solving sprint challenging teams of medicos and innovators to engineer working prototypes for clinical safety, AI diagnostics, and hospital workflow automation.',
+      'An intensive clinical problem-solving sprint challenging teams of medicos and healthcare scholars to develop working prototypes for clinical safety, AI diagnostics, and hospital workflow automation.',
     deliverables: [
       'Exclusive Track Naming Endorsement ("Presented by [Partner]")',
       'Seat on the final expert evaluation jury panel',
       'Logo on all hackathon problem statement documents and digital repositories',
-      'Direct interaction with top medical and engineering innovators',
+      'Direct interaction with top medical innovators and clinician problem-solvers',
     ],
   },
   {
@@ -205,7 +204,7 @@ export const academicTracks: AcademicTrack[] = [
     targetAudience: 'Universal Medico',
     category: 'Clinical Knowledge',
     description:
-      'Electrifying diagnostic trivia and medical quiz tournament featuring buzzer rounds, clinical image identification, and clinical case puzzles in an amphitheater setting.',
+      'KRITI’s flagship clinical knowledge and medical quiz tournament featuring electrifying buzzer rounds, clinical image identification, and diagnostic case puzzles in an amphitheater setting.',
     deliverables: [
       'Official Quiz Track endorsement on electronic scoreboard screens',
       'Partner logo on participant quiz answer sheets and buzzer consoles',
@@ -293,7 +292,7 @@ export const academicTracks: AcademicTrack[] = [
 export const conferenceMetrics: ConferenceMetric[] = [
   {
     label: 'Delegates Attending',
-    value: '2,000+',
+    value: '3,000+',
     subtext: 'UG Medicos, PGs, Interns & Faculty from across India',
     iconName: 'Users',
   },

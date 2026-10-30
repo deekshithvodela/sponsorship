@@ -96,6 +96,15 @@ export const Footer: React.FC = () => {
 
             <div className="font-mono text-[11px] text-[#a39e93] space-y-1">
               <div>{contactConfig.organisersHours}</div>
+              <div>
+                Email:{' '}
+                <a
+                  href={`mailto:${contactConfig.organisersEmail}`}
+                  className="text-[#d4cdbc] hover:text-[#e5483c] transition-colors"
+                >
+                  {contactConfig.organisersEmail}
+                </a>
+              </div>
               <div>Conference Website: <a href="https://www.kritikmc.com" target="_blank" rel="noopener noreferrer" className="text-[#d4cdbc] hover:text-[#e5483c] inline-flex items-center gap-1">www.kritikmc.com <ExternalLink className="w-3 h-3" /></a></div>
             </div>
           </div>

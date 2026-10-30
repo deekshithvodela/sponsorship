@@ -238,6 +238,33 @@ async function runTests() {
   console.log('Simulator interaction (Gold Tier & Organisers in WhatsApp URL):', simulatorHasGold ? 'PASS' : `FAIL (${estimatorHref})`);
   if (!simulatorHasGold) allPassed = false;
 
+  // 18. Verify 3,000+ Delegates Metric
+  const has3000Delegates = (await testPage.locator('text=3,000+').count()) > 0;
+  console.log('Delegate Attendance Metric: "3,000+":', has3000Delegates ? 'PASS' : 'FAIL');
+  if (!has3000Delegates) allPassed = false;
+
+  // 19. Verify Gold Tier has NO Keynote Address
+  const goldCard = testPage.locator('#tier-card-gold');
+  const goldCardText = await goldCard.innerText();
+  const goldHasKeynote = goldCardText.toLowerCase().includes('keynote address') || goldCardText.toLowerCase().includes('keynote speech');
+  console.log('Gold Tier Keynote Address Removed:', !goldHasKeynote ? 'PASS (0 keynote in Gold)' : 'FAIL');
+  if (goldHasKeynote) allPassed = false;
+
+  // 20. Verify Flagship Jeopardy & Medical Hackathon Pillars (Zero Engineers)
+  const hasJeopardyFlagship = (await testPage.locator('text=Flagship Medical Jeopardy').count()) > 0;
+  const hasHackathonPillar = (await testPage.locator('text=Medical Hackathon').count()) > 0;
+  const hasEngineers = bodyText.toLowerCase().includes('engineer');
+  console.log('Pillar [01] "Flagship Medical Jeopardy":', hasJeopardyFlagship ? 'PASS' : 'FAIL');
+  console.log('Pillar [03] "Medical Hackathon":', hasHackathonPillar ? 'PASS' : 'FAIL');
+  console.log('Zero "engineer / engineers" mention in site text:', !hasEngineers ? 'PASS' : 'FAIL');
+  if (!hasJeopardyFlagship || !hasHackathonPillar || hasEngineers) allPassed = false;
+
+  // 21. Verify Organiser Email in Footer below 24x7
+  const footerEmail = testPage.locator('footer a[href="mailto:deekshithvodela@gmail.com"]');
+  const hasFooterEmail = (await footerEmail.count()) > 0;
+  console.log('Footer Email: "deekshithvodela@gmail.com":', hasFooterEmail ? 'PASS' : 'FAIL');
+  if (!hasFooterEmail) allPassed = false;
+
   await browser.close();
 
   console.log('\n--- Final Verification Summary ---');

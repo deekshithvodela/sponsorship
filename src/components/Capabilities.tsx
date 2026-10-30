@@ -1,16 +1,16 @@
 import React from 'react';
 import { conferencePillars } from '../data/capabilities';
-import { Cpu, Users, BookOpen, Layers, Award, Globe, ArrowRight } from 'lucide-react';
+import { Trophy, Users, Cpu, Layers, Award, Globe, ArrowRight } from 'lucide-react';
 
 export const Capabilities: React.FC = () => {
   const getIcon = (id: string) => {
     switch (id) {
-      case 'medical-hackathon':
-        return <Cpu className="w-5 h-5 text-[#e5483c]" />;
+      case 'medical-jeopardy':
+        return <Trophy className="w-5 h-5 text-[#e5483c]" />;
       case 'campus-pr-tour':
         return <Users className="w-5 h-5 text-[#e5483c]" />;
-      case 'academic-research':
-        return <BookOpen className="w-5 h-5 text-[#e5483c]" />;
+      case 'medical-hackathon':
+        return <Cpu className="w-5 h-5 text-[#e5483c]" />;
       case 'medtech-expo':
         return <Layers className="w-5 h-5 text-[#e5483c]" />;
       case 'kakatiya-chronicles':

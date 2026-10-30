@@ -39,7 +39,7 @@ export const faqItems: FAQItem[] = [
     category: 'Packages & Tiers',
     question: 'What is the official KRITI Souvenir (Kakatiya Chronicles)?',
     answer:
-      'Kakatiya Chronicles is the official commemorative souvenir and academic publication of Kakatiya Medical College, compiling finalist abstracts, research papers, and conference proceedings. Partner mentions are archived and distributed directly to all 2,000+ delegates, institutional leaders, and medical faculty.',
+      'Kakatiya Chronicles is the official commemorative souvenir and academic publication of Kakatiya Medical College, compiling finalist abstracts, research papers, and conference proceedings. Partner mentions are archived and distributed directly to all 3,000+ delegates, institutional leaders, and medical faculty.',
   },
   {
     id: 'faq-track-sponsorships',

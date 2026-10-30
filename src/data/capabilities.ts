@@ -26,13 +26,13 @@ export interface ComparisonMatrixRow {
 
 export const conferencePillars: PillarItem[] = [
   {
-    id: 'medical-hackathon',
+    id: 'medical-jeopardy',
     index: '01',
-    title: 'Flagship Medical Hackathon',
-    category: 'Innovation & MedTech',
+    title: 'Flagship Medical Jeopardy',
+    category: 'Clinical Mastery & Quiz',
     description:
-      'KRITI’s premier clinical problem-solving competition challenging interdisciplinary teams of medicos and engineers to develop working prototypes for urgent medical issues, hospital safety, and AI diagnostic aids.',
-    impactMetric: '36-Hour Hackathon · National MedTech Teams',
+      'KRITI’s premier diagnostic trivia and medical quiz arena challenging India’s sharpest medicos across high-stakes buzzer rounds, rare clinical cases, and rapid-fire medical problem-solving.',
+    impactMetric: 'National Medico Teams · Plenary Arena Quiz',
     badge: 'Premier Event',
   },
   {
@@ -46,14 +46,14 @@ export const conferencePillars: PillarItem[] = [
     badge: 'Statewide Tour',
   },
   {
-    id: 'academic-research',
+    id: 'medical-hackathon',
     index: '03',
-    title: 'PG & UG Research (Papers & Posters)',
-    category: 'Scientific Inquiry',
+    title: 'Medical Hackathon',
+    category: 'Clinical Innovation',
     description:
-      'Delegates from premier medical institutions across India present peer-reviewed original papers and visual case posters on artificial intelligence in healthcare, innovative surgical techniques, and public health.',
-    impactMetric: 'PG & UG Tracks · Peer-Reviewed',
-    badge: 'Dual Academic Tiers',
+      'KRITI’s intensive clinical problem-solving sprint challenging medical students, residents, and healthcare scholars to develop rapid prototypes for urgent patient care, clinical safety, and healthcare delivery.',
+    impactMetric: '36-Hour Hackathon · Clinical Prototypes',
+    badge: 'Innovation Sprint',
   },
   {
     id: 'medtech-expo',
@@ -61,7 +61,7 @@ export const conferencePillars: PillarItem[] = [
     title: 'Med-Tech & Device Exhibition',
     category: 'Medical Technology',
     description:
-      'A dedicated exhibition arena where healthcare innovators, surgical manufacturers, diagnostic labs, and medical software providers exhibit directly to over 2,000 clinicians, residents, and medicos.',
+      'A dedicated exhibition arena where healthcare innovators, surgical manufacturers, diagnostic labs, and medical software providers exhibit directly to over 3,000 clinicians, residents, and medicos.',
     impactMetric: 'Three-Day Prime Exhibition Footprint',
     badge: 'Industry Showcase',
   },
@@ -119,9 +119,9 @@ export const comparisonMatrix: ComparisonMatrixRow[] = [
     category: 'Stage Presence & Keynote',
     deliverable: 'Keynote Address / Pitch Slot',
     fullMonopoly: 'Mainstage Keynote Address',
-    collabMonopoly: 'Mainstage Keynote Address',
+    collabMonopoly: false,
     limitedMonopoly: false,
-    notes: 'Opportunity for guest speaker to present corporate vision to 2,000+ delegates',
+    notes: 'Opportunity for guest speaker to present corporate vision to 3,000+ delegates',
   },
 
   // 3. Exhibition & Workspaces

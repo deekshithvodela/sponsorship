@@ -77,6 +77,7 @@ export const PricingTiers: React.FC = () => {
               return (
                 <div
                   key={tier.id}
+                  id={`tier-card-${tier.id}`}
                   className={`flex flex-col justify-between border bg-[#141414] p-6 sm:p-7 relative transition-all duration-200 corner-frame ${
                     tier.isFlagship
                       ? 'border-[#e5483c] shadow-[0_0_30px_rgba(229,72,60,0.15)] ring-1 ring-[#e5483c]/50'

@@ -45,7 +45,7 @@ const AVAILABLE_DELIVERABLES: DeliverableOption[] = [
   { id: 'booth', label: 'Three-Day Prime Exhibition Demo Booth', impactScore: 16, category: 'Exhibition' },
   { id: 'campus-tour', label: 'Campus PR Tour Feature (50+ Medical Colleges)', impactScore: 18, category: 'Statewide' },
   { id: 'souvenir', label: 'Partner Mention in Official KRITI Souvenir (Kakatiya Chronicles)', impactScore: 14, category: 'Publication' },
-  { id: 'delegate-kit', label: 'Delegate Welcome Kit Inserts (2,000+ Medicos)', impactScore: 10, category: 'Collateral' },
+  { id: 'delegate-kit', label: 'Delegate Welcome Kit Inserts (3,000+ Medicos)', impactScore: 10, category: 'Collateral' },
 ];
 
 export const CostEstimator: React.FC = () => {
@@ -355,7 +355,7 @@ export const CostEstimator: React.FC = () => {
                   <span>Direct Medico Interactions</span>
                 </div>
                 <div className="font-mono text-[14px] text-[#faf6ec] font-bold">
-                  2,000+ Medicos & Faculty
+                  3,000+ Medicos & Faculty
                 </div>
               </div>
 

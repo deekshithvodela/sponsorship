@@ -188,13 +188,13 @@ function getBannerHtml(width, height) {
   <div class="main-content">
     <div class="category-tag">[ OFFICIAL PARTNERSHIP & SPONSORSHIP PROSPECTUS ]</div>
     <h1 class="hero-title">Academic Packages &amp; Event Tracks<span>.</span></h1>
-    <p class="subhead">Title Partner · Co-Host Partner · Exhibition · 10 Confirmed Academic Event Tracks. Connect directly with over 2,000 medical students, clinicians, and researchers.</p>
+    <p class="subhead">Platinum Tier · Gold Tier · Silver Tier · 11 Confirmed Academic Event Tracks. Connect directly with over 3,000 medical students, clinicians, and researchers.</p>
   </div>
 
   <div class="footer-row">
     <div class="metrics-bar">
       <div class="metric-item">
-        <span class="metric-val">2,000+</span>
+        <span class="metric-val">3,000+</span>
         <span class="metric-lbl">Delegates Attending</span>
       </div>
       <div class="metric-item">
@@ -202,7 +202,7 @@ function getBannerHtml(width, height) {
         <span class="metric-lbl">Campus PR Outreach</span>
       </div>
       <div class="metric-item">
-        <span class="metric-val">10+ Events</span>
+        <span class="metric-val">11 Events</span>
         <span class="metric-lbl">Academic Tracks</span>
       </div>
       <div class="metric-item">
@@ -371,7 +371,7 @@ function getSquareHtml() {
 
   <div class="grid-metrics">
     <div class="m-item">
-      <span class="m-val">2,000+</span>
+      <span class="m-val">3,000+</span>
       <span class="m-lbl">Medicos &amp; Faculty</span>
     </div>
     <div class="m-item">
@@ -379,7 +379,7 @@ function getSquareHtml() {
       <span class="m-lbl">Statewide PR</span>
     </div>
     <div class="m-item">
-      <span class="m-val">10+ Events</span>
+      <span class="m-val">11 Events</span>
       <span class="m-lbl">Academic Tracks</span>
     </div>
     <div class="m-item">

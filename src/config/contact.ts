@@ -30,6 +30,7 @@ export interface ContactConfig {
   };
 
   organisersHours: string;
+  organisersEmail: string;
   organisersLocation: string;
 }
 
@@ -54,6 +55,7 @@ export const contactConfig: ContactConfig = {
   },
 
   organisersHours: 'Available 24x7',
+  organisersEmail: 'deekshithvodela@gmail.com',
   organisersLocation: 'Kakatiya Medical College, Warangal, Telangana, India',
 };
 

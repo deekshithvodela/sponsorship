@@ -61,7 +61,7 @@ export const Hero: React.FC = () => {
 
             {/* Supporting Copy */}
             <p className="font-body text-[16px] sm:text-[18px] md:text-[20px] text-[#aaa497] leading-[1.5] max-w-[680px] mb-8">
-              A universal sponsorship prospectus for healthcare enterprises, medical technology brands, pharmaceutical pioneers, and academic organizations. Engage directly with over 2,000 medical students, clinicians, residents, interns, and healthcare researchers across India.
+              A universal sponsorship prospectus for healthcare enterprises, medical technology brands, pharmaceutical pioneers, and academic organizations. Engage directly with over 3,000 medical students, clinicians, residents, interns, and healthcare researchers across India.
             </p>
 
             {/* Primary Action Buttons (Strictly Zero Forms) */}
