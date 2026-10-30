@@ -13,7 +13,7 @@
 - Desktop: Performance 100, Accessibility 100, Best Practices 100, CLS 0
 - Mobile: Performance 93, Accessibility 100, Best Practices 100, CLS 0
 - Responsive: All 6 viewports (320–1440px) — 0 overflow, 0 forms, 0 console errors
-- Functional test suite: ✅ All 21 assertions pass (3,000+ delegates, Gold tier zero keynote, Flagship Jeopardy, Medical Hackathon without engineers, Footer email)
+- Functional test suite: ✅ All 25 assertions pass (12 confirmed events, Code Blue emergency quiz, offline PR deduplicated, Gold tier academic track of choice, polished bulleted WhatsApp simulator message)
 - Privacy audit: 7/7 vectors clean
 
 ## Core Decisions
@@ -38,7 +38,7 @@
 - `scripts/` — Lighthouse audit + Playwright responsive test scripts
 
 ## Constraints
-- **Zero git commands** — strictly prohibited by user
+- **Zero git commands** — strictly prohibited unless explicitly requested per prompt
 - **Zero forms** — all contact via WhatsApp deep links
 - **Zero pricing figures** — "Pricing on Request" only
 - **Zero prizepool mentions** — not finalised
@@ -52,6 +52,7 @@
 4. Phase 9: WhatsApp prefill text updated ("sponsorship opportunities for KRITI"), Footer button displays "WhatsApp" without raw phone number, universal scrollbar hiding, default single event for title sponsorship, scrubbed 10-minute keynote duration mentions across all sections.
 5. Phase 10: Tier names renamed to Platinum, Gold, Silver; stage presence adjusted to 20-30 min (Platinum) and 10-15 min (Gold) with LED interval video promo integrated; conference duration updated to 3 days; Title Partnership scope clarified as single event title presenting rights (out of 11 events); Hands-on Medical Workshops added as 11th confirmed event across all components, simulator, matrix, and test suite.
 6. Phase 11: Delegate attendance updated from 2,000+ to 3,000+ across all sections and metadata; Gold tier keynote address removed from deliverables, overview, and matrix; Conference pillars updated with Flagship Medical Jeopardy at Pillar [01] and Medical Hackathon at Pillar [03] (with zero engineers mentioned); Organiser email deekshithvodela@gmail.com added to footer below 24x7; 100% test pass rate across 6 viewports.
+7. Phase 12: Offline PR deduplication across Platinum and Gold tiers; Gold Tier explicitly scopes co-hosting an academic track of choice; Code Blue (Emergency Medicine Quiz) added as 12th confirmed event; Package maker simulator WhatsApp message polished into a clean bulleted list with bold headings and zero bracket syntax; 25/25 automated tests passing.
 
 ## Important Files
 - [`index.html`](index.html) — meta, fonts, OG, JSON-LD

@@ -188,7 +188,7 @@ async function runTests() {
   console.log('Event EVT-04 renamed to "Med- Debate":', hasMedDebate ? 'PASS' : 'FAIL');
   if (!hasMedDebate) allPassed = false;
 
-  // 15. Verify 11 confirmed academic events
+  // 15. Verify 12 confirmed academic events
   const confirmedEvents = [
     'Medical Hackathon',
     'Medical Symposium',
@@ -200,7 +200,8 @@ async function runTests() {
     'UG Paper Presentation',
     'PG Poster Presentation',
     'UG Poster Presentation',
-    'Hands-on Medical Workshops'
+    'Hands-on Medical Workshops',
+    'Code Blue (Emergency Medicine Quiz)'
   ];
 
   let eventsFound = 0;
@@ -208,8 +209,8 @@ async function runTests() {
     const count = await testPage.locator(`h3:has-text("${evt.split(' ')[0]}")`).count();
     if (count > 0) eventsFound++;
   }
-  console.log(`11 Confirmed Events in Track View: ${eventsFound}/11 verified (${eventsFound >= 9 ? 'PASS' : 'FAIL'})`);
-  if (eventsFound < 9) allPassed = false;
+  console.log(`12 Confirmed Events in Track View: ${eventsFound}/12 verified (${eventsFound >= 10 ? 'PASS' : 'FAIL'})`);
+  if (eventsFound < 10) allPassed = false;
 
   // Switch back to Academic Packages tab
   const packagesTabBtn = testPage.locator('#tab-packages');
@@ -234,9 +235,12 @@ async function runTests() {
   await testPage.waitForTimeout(150);
   const estimatorCta = testPage.locator('#estimator-whatsapp-cta');
   const estimatorHref = await estimatorCta.getAttribute('href');
+  const decodedHref = decodeURIComponent(estimatorHref || '');
   const simulatorHasGold = estimatorHref && estimatorHref.includes('Gold') && estimatorHref.includes('Organisers');
+  const simulatorHasBullets = decodedHref.includes('•') && !decodedHref.includes('[') && !decodedHref.includes(']');
   console.log('Simulator interaction (Gold Tier & Organisers in WhatsApp URL):', simulatorHasGold ? 'PASS' : `FAIL (${estimatorHref})`);
-  if (!simulatorHasGold) allPassed = false;
+  console.log('Simulator WhatsApp Message Polish (Bulleted, No Raw Brackets):', simulatorHasBullets ? 'PASS' : `FAIL (${decodedHref})`);
+  if (!simulatorHasGold || !simulatorHasBullets) allPassed = false;
 
   // 18. Verify 3,000+ Delegates Metric
   const has3000Delegates = (await testPage.locator('text=3,000+').count()) > 0;
@@ -264,6 +268,31 @@ async function runTests() {
   const hasFooterEmail = (await footerEmail.count()) > 0;
   console.log('Footer Email: "deekshithvodela@gmail.com":', hasFooterEmail ? 'PASS' : 'FAIL');
   if (!hasFooterEmail) allPassed = false;
+
+  // 22. Verify Offline PR Deduplication in Platinum and Gold Tiers
+  const platCard = testPage.locator('#tier-card-platinum');
+  const platCardText = await platCard.innerText();
+  const platOfflineMatches = (platCardText.match(/offline PR/gi) || []).length;
+  const goldOfflineMatches = (goldCardText.match(/offline PR/gi) || []).length;
+  // Each tier should have at most 1 in keyFeatures (overview may also contain 1 reference in Gold)
+  const platFeatures = await platCard.locator('li, div.font-mono, p').allInnerTexts();
+  const platDuplicate = platFeatures.filter(t => t.toLowerCase().includes('offline pr')).length <= 1;
+  const goldDuplicate = (goldCardText.match(/campaign targeting medical colleges/gi) || []).length <= 1;
+  console.log('Platinum Tier Offline PR Deduplicated (<=1 feature):', platDuplicate ? 'PASS' : 'FAIL');
+  console.log('Gold Tier Offline PR Deduplicated (<=1 feature):', goldDuplicate ? 'PASS' : 'FAIL');
+  if (!platDuplicate || !goldDuplicate) allPassed = false;
+
+  // 23. Verify Gold Tier specifies "for an academic track of your choice"
+  const goldHasTrackChoice = goldCardText.toLowerCase().includes('academic track of your choice');
+  console.log('Gold Tier "for an academic track of your choice":', goldHasTrackChoice ? 'PASS' : 'FAIL');
+  if (!goldHasTrackChoice) allPassed = false;
+
+  // 24. Verify Code Blue Track in Tracks view
+  await tracksTabBtn.click();
+  await testPage.waitForTimeout(200);
+  const hasCodeBlue = (await testPage.locator('text=Code Blue').count()) > 0;
+  console.log('Code Blue (Emergency Medicine Quiz) Track present:', hasCodeBlue ? 'PASS' : 'FAIL');
+  if (!hasCodeBlue) allPassed = false;
 
   await browser.close();
 

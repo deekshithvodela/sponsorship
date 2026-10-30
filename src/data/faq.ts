@@ -18,14 +18,14 @@ export const faqItems: FAQItem[] = [
     category: 'Packages & Tiers',
     question: 'What are the main sponsorship packages and partnership options available?',
     answer:
-      'KRITI offers three primary academic partnership tiers: (1) Platinum Tier for single event title presenting rights and complete event branding; (2) Gold Tier for conference co-host branding and dedicated stage presence; and (3) Silver Tier for three-day prime atrium exhibition presence and souvenir mention. Customized proposals are available on request via organisers on WhatsApp. Organizations can also endorse specific competition tracks across our 11 confirmed academic events.',
+      'KRITI offers three primary academic partnership tiers: (1) Platinum Tier for single event title presenting rights and complete event branding; (2) Gold Tier for conference co-host branding for an academic track of choice and dedicated stage presence; and (3) Silver Tier for three-day prime atrium exhibition presence and souvenir mention. Customized proposals are available on request via organisers on WhatsApp. Organizations can also endorse specific competition tracks across our 12 confirmed academic events.',
   },
   {
     id: 'faq-title-hosting',
     category: 'Conference & Events',
     question: 'What does Platinum Tier (Single Event Title Partner) include across the conference?',
     answer:
-      'The Platinum Tier secures presenting rights for a chosen event out of our 11 confirmed academic events. This package includes prominent title presentation rights for the event, guarantees 20-30 minutes of dedicated mainstage presence across the 3-day conference (including promotional video broadcasts on main LED screens), and prime atrium exhibition presence.',
+      'The Platinum Tier secures presenting rights for a chosen event out of our 12 confirmed academic events. This package includes prominent title presentation rights for the event, guarantees 20-30 minutes of dedicated mainstage presence across the 3-day conference (including promotional video broadcasts on main LED screens), and prime atrium exhibition presence.',
   },
   {
     id: 'faq-campus-pr-tour',
@@ -46,7 +46,7 @@ export const faqItems: FAQItem[] = [
     category: 'Conference & Events',
     question: 'Which academic competition tracks are confirmed for this year?',
     answer:
-      'This year features 11 confirmed academic events: Hands-on Medical Workshops, PG Poster, UG Poster, PG Paper, UG Paper, Medical Symposium, Med- Debate, Medical Hackathon, Med-Tech Exhibition, Medical Model United Nations (Med-MUN), and Medical Jeopardy (Quiz). Partners can endorse specific tracks for naming rights, jury seats, and trophy presentation honors.',
+      'This year features 12 confirmed academic events: Hands-on Medical Workshops, Code Blue (Emergency Medicine Quiz), PG Poster, UG Poster, PG Paper, UG Paper, Medical Symposium, Med- Debate, Medical Hackathon, Med-Tech Exhibition, Medical Model United Nations (Med-MUN), and Medical Jeopardy (Quiz). Partners can endorse specific tracks for naming rights, jury seats, and trophy presentation honors.',
   },
   {
     id: 'faq-booth-specifications',

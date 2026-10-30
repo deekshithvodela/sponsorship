@@ -1,9 +1,9 @@
 /**
- * KRITI 2027 Sponsorship Packages & 11 Confirmed Academic Event Tracks
+ * KRITI 2027 Sponsorship Packages & 12 Confirmed Academic Event Tracks
  * 
  * Kakatiya Medical College, Warangal
  * Incorporates confirmed events: PG Poster, UG Poster, PG Paper, UG Paper,
- * Symposium, Debate, Hackathon, Med-Tech Exhibition, MUN, Jeopardy, Workshops.
+ * Symposium, Debate, Hackathon, Med-Tech Exhibition, MUN, Jeopardy, Workshops, Code Blue.
  * NOTE: Prize pool amounts are unfinalized and strictly omitted.
  */
 
@@ -53,14 +53,13 @@ export const sponsorshipTiers: SponsorshipTier[] = [
     badge: 'FLAGSHIP // EVENT TITLE',
     isFlagship: true,
     overview:
-      'The premier sponsorship tier offering event title presenting rights for an academic track of your choice out of 11 events, 20-30 minutes of dedicated mainstage presence (including promotional video broadcast), and statewide campus outreach across 50+ colleges.',
+      'The premier sponsorship tier offering event title presenting rights for an academic track of your choice out of 12 events, 20-30 minutes of dedicated mainstage presence (including promotional video broadcast), and statewide campus outreach across 50+ colleges.',
     keyFeatures: [
       'Official Event Title Partner & Presenter for your chosen academic track',
       '20-30 minutes of guaranteed mainstage presence across the 3-day conference (including promotional video broadcast on main LED screens)',
       'Dedicated partner keynote address during prime plenary session',
       'Integration with statewide offline PR campaign visiting 50+ medical colleges across Telangana',
       'Prime designated exhibition booth in central high-traffic atrium',
-      'Complete offline PR campaign targeting medical colleges across Telangana & AP',
       'Multi-channel online broadcast across official KRITI social media and website',
       'Partner mention in the official KRITI Souvenir (Kakatiya Chronicles) distributed to faculty & delegates',
       'Prominent venue banners, standees across key atriums, and direct coverage across delegate network',
@@ -80,13 +79,12 @@ export const sponsorshipTiers: SponsorshipTier[] = [
     badge: 'HIGH IMPACT // GOLD',
     isFlagship: false,
     overview:
-      'Strategic partnership positioning your brand as an official Co-Host Partner of the Annual Conference with 10-15 minutes of dedicated stage presence (including promotional video broadcast) and offline PR reach across medical colleges.',
+      'Strategic partnership positioning your brand as an official Co-Host Partner for an academic track of your choice out of 12 events, with 10-15 minutes of dedicated stage presence (including promotional video broadcast) and offline PR reach across medical colleges.',
     keyFeatures: [
-      'Official Co-Host Partner across Annual Conference Sessions & Plenaries',
+      'Official Co-Host Partner for an academic track of your choice across Annual Conference Sessions & Plenaries',
       '10-15 minutes of dedicated mainstage presence across conference sessions (including promotional video broadcast on LED displays)',
       'Integration with offline PR campaign targeting medical colleges in Hyderabad',
       'Designated exhibition booth in high-traffic atrium',
-      'Offline PR campaign targeting medical colleges in the Hyderabad metro region',
       'Online broadcast across KRITI social media channels and official website',
       'Partner mention in the official KRITI Souvenir (Kakatiya Chronicles)',
       'Banners, standees, and direct coverage across delegate network',
@@ -287,6 +285,21 @@ export const academicTracks: AcademicTrack[] = [
       'Dedicated branding across workshop halls, simulation consoles, and training manuals',
     ],
   },
+  {
+    id: 'track-code-blue',
+    name: 'Code Blue (Emergency Medicine Quiz)',
+    code: 'EVT-12 // EMERGENCY QUIZ',
+    targetAudience: 'Universal Medico',
+    category: 'Emergency Medicine & Critical Care',
+    description:
+      'High-intensity clinical quiz arena focused on acute resuscitation algorithms, trauma triage, BLS/ACLS protocols, cardiac arrest simulations, and rapid emergency decision-making.',
+    deliverables: [
+      'Official Track Naming Endorsement ("Code Blue Emergency Quiz Presented by [Partner]")',
+      'Branding across emergency simulation consoles, timer screens, and quiz buzzer stations',
+      'Trophy & award presentation to champion emergency medicine student teams',
+      'Digital broadcast and real-time social coverage of high-stakes emergency finals',
+    ],
+  },
 ];
 
 export const conferenceMetrics: ConferenceMetric[] = [
@@ -304,8 +317,8 @@ export const conferenceMetrics: ConferenceMetric[] = [
   },
   {
     label: 'Academic Event Tracks',
-    value: '11 Events',
-    subtext: 'Hackathon, Symposium, Med-Tech Expo, Workshops, MUN, Quiz & Papers',
+    value: '12 Events',
+    subtext: 'Hackathon, Symposium, Med-Tech Expo, Workshops, Code Blue & Papers',
     iconName: 'Trophy',
   },
   {

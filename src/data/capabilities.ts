@@ -100,8 +100,8 @@ export const comparisonMatrix: ComparisonMatrixRow[] = [
   {
     category: 'Investment & Association',
     deliverable: 'Event Title Partner & Hosting Role',
-    fullMonopoly: 'Single Event Title Partner & Presenter (Choice of 11 Events)',
-    collabMonopoly: 'Official Co-Host Partner of Annual Conference',
+    fullMonopoly: 'Single Event Title Partner & Presenter (Choice of 12 Events)',
+    collabMonopoly: 'Official Co-Host Partner for an Academic Track of your Choice (out of 12 Events)',
     limitedMonopoly: 'Official Conference Exhibitor',
     notes: 'Official title presentation rights for your chosen event track or co-host association',
   },

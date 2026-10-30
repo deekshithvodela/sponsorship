@@ -27,7 +27,7 @@ export const FAQ: React.FC = () => {
             Frequently Asked Questions<span className="text-[#e5483c]">.</span>
           </h2>
           <p className="font-body text-[15px] sm:text-[17px] text-[#aaa497] mt-3">
-            Essential facts on KRITI sponsorship tiers, headline title rights, our 11 confirmed academic events, booth facilities, and direct WhatsApp organisers access.
+            Essential facts on KRITI sponsorship tiers, headline title rights, our 12 confirmed academic events, booth facilities, and direct WhatsApp organisers access.
           </p>
         </div>
 

@@ -38,6 +38,7 @@ const AVAILABLE_TRACKS: EventTrackOption[] = [
   { id: 'papers', name: 'Scientific Papers (PG/UG)', code: 'EVT-07/08', category: 'Research' },
   { id: 'posters', name: 'Scientific Posters (PG/UG)', code: 'EVT-09/10', category: 'Clinical' },
   { id: 'workshops', name: 'Hands-on Workshops', code: 'EVT-11', category: 'Skills' },
+  { id: 'code-blue', name: 'Code Blue (Emergency Quiz)', code: 'EVT-12', category: 'Emergency' },
 ];
 
 const AVAILABLE_DELIVERABLES: DeliverableOption[] = [
@@ -96,7 +97,7 @@ export const CostEstimator: React.FC = () => {
     selectedTier === 'title'
       ? 'Platinum Tier (Single Event Title Partner)'
       : selectedTier === 'cohost'
-      ? 'Gold Tier (Co-Host Partner)'
+      ? 'Gold Tier (Co-Host Partner for an Academic Track)'
       : 'Silver Tier (Exhibition Partner)';
 
   const stagePresence =
@@ -129,23 +130,28 @@ export const CostEstimator: React.FC = () => {
       ? 'STRONG TARGETED ENGAGEMENT'
       : 'ESSENTIAL EXHIBITION PRESENCE';
 
-  // Dynamic WhatsApp prefilled message
-  const trackNames = selectedTracks
+  // Dynamic WhatsApp prefilled message (clean bulleted list with WhatsApp bold formatting)
+  const selectedTrackList = selectedTracks
     .map((id) => AVAILABLE_TRACKS.find((t) => t.id === id)?.name)
-    .filter(Boolean)
-    .join(', ');
+    .filter(Boolean) as string[];
 
-  const deliverablesNames = selectedDeliverables
+  const selectedDeliverableList = selectedDeliverables
     .map((id) => AVAILABLE_DELIVERABLES.find((d) => d.id === id)?.label)
-    .filter(Boolean)
-    .slice(0, 4)
-    .join('; ');
+    .filter(Boolean) as string[];
 
-  const whatsAppUrl = getWhatsAppUrl(
-    `Hello KRITI 2027 Organisers, using the Partnership Simulator, our organization configured a custom academic package: Base: ${tierName}${
-      trackNames ? `, Endorsed Tracks: [${trackNames}]` : ''
-    }, Key Inclusions: [${deliverablesNames}]. We would like to request the customized proposal and partnership details.`
-  );
+  const tracksSection =
+    selectedTrackList.length > 0
+      ? `\n\n*Endorsed Events / Tracks:*\n${selectedTrackList.map((t) => `• ${t}`).join('\n')}`
+      : '';
+
+  const deliverablesSection =
+    selectedDeliverableList.length > 0
+      ? `\n\n*Key Deliverables & Activations:*\n${selectedDeliverableList.map((d) => `• ${d}`).join('\n')}`
+      : '';
+
+  const messageText = `Hello KRITI 2027 Organisers,\n\nWe configured a custom academic package using the Simulator on the website:\n\n*Selected Tier:*\n• ${tierName}${tracksSection}${deliverablesSection}\n\nWe would like to request the customized proposal and partnership details.`;
+
+  const whatsAppUrl = getWhatsAppUrl(messageText);
 
   return (
     <section id="estimator" className="py-16 sm:py-24 px-4 sm:px-6 border-b border-[#2a2a2a] relative">
@@ -160,7 +166,7 @@ export const CostEstimator: React.FC = () => {
             Configure Your Partnership Package<span className="text-[#e5483c]">.</span>
           </h2>
           <p className="font-body text-[15px] sm:text-[17px] text-[#aaa497] max-w-[760px] mt-3">
-            Select your base conference tier, customize academic track endorsements across our 11 confirmed events, and toggle activation deliverables to simulate your organization’s multi-channel reach.
+            Select your base conference tier, customize academic track endorsements across our 12 confirmed events, and toggle activation deliverables to simulate your organization’s multi-channel reach.
           </p>
         </div>
 
